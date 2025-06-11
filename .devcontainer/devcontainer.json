@@ -1,0 +1,17 @@
+{
+  "name": "lidar-demo ROS2",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-python.python",
+    "ms-iot.vscode-ros"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "bash -lc 'mkdir -p ~/ros2_ws/src && cp -R . ~/ros2_ws/src/lidar_demo && cd ~/ros2_ws && colcon build --symlink-install'"
+}
